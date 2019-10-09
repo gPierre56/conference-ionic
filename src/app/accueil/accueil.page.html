@@ -1,17 +1,41 @@
+
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="end">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Conférence
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            DevFest Nantes 2018
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-card class="welcome-card">
-    <img src="../../assets/logo-devfest-wow.png">
-    
-</ion-card>
+    <ion-card class="welcome-card">
+        <ion-row justify-content-center>
+            <ion-img src="../../assets/logo-devfest-wow.png" alt="" style="width: 50%; height: 15%;"
+                     class="align"></ion-img>
+        </ion-row>
+        <ion-card-header>
+            <ion-card-title text-center>Conférence</ion-card-title>
+
+            <ion-card-subtitle  text-center>{{dateDebut | date: 'd MMM y'}}
+                - {{dateFin | date: 'd MMM y'}}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-row justify-content-center>
+                <ion-button color="primary">Voir les sessions</ion-button>
+
+            </ion-row>
+            <ion-row justify-content-center>
+                <ion-button color="primary" margin-top>Voir les présentateurs</ion-button>
+            </ion-row>
+        </ion-card-content>
+
+    </ion-card>
 </ion-content>
+
+
+
+
+

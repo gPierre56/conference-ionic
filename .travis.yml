@@ -2,7 +2,9 @@ language: node_js
 node_js:
   - "12"
 before_script: npm i ionic cordova
-script: ionic build --prod -- --base-href https://gPierre56.github.io/conference-ionic/
+script:
+  - ionic build --prod -- --base-href https://gPierre56.github.io/conference-ionic/
+  - cp www/index.html www/404.html
 deploy:
   provider: pages
   skip-cleanup: true
