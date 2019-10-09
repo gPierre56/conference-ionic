@@ -17,7 +17,8 @@ const routes: Routes = [
   },
   { path: 'accueil', loadChildren: './accueil/accueil.module#AccueilPageModule' },
   { path: 'presentateur', loadChildren: './presentateur/presentateur.module#PresentateurPageModule' },
-  { path: 'session', loadChildren: './session/session.module#SessionPageModule' }
+  { path: 'session', loadChildren: './session/session.module#SessionPageModule' },
+  { path: 'details-session', loadChildren: './details-session/details-session.module#DetailsSessionPageModule' }
 ];
 
 @NgModule({

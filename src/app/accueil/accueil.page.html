@@ -17,18 +17,18 @@
                      class="align"></ion-img>
         </ion-row>
         <ion-card-header>
-            <ion-card-title text-center>Conférence</ion-card-title>
+            <ion-card-title class="ion-text-center">Conférence</ion-card-title>
 
-            <ion-card-subtitle  text-center>{{dateDebut | date: 'd MMM y'}}
+            <ion-card-subtitle  class="ion-text-center">{{dateDebut | date: 'd MMM y'}}
                 - {{dateFin | date: 'd MMM y'}}</ion-card-subtitle>
         </ion-card-header>
         <ion-card-content>
-            <ion-row justify-content-center>
-                <ion-button color="primary">Voir les sessions</ion-button>
+            <ion-row class="ion-justify-content-center">
+                <ion-button color="primary" (click)="naviguerSessions()">Voir les sessions</ion-button>
 
             </ion-row>
-            <ion-row justify-content-center>
-                <ion-button color="primary" margin-top>Voir les présentateurs</ion-button>
+            <ion-row class="ion-justify-content-center">
+                <ion-button color="primary" margin-top (click)="naviguerPresentateurs()">Voir les présentateurs</ion-button>
             </ion-row>
         </ion-card-content>
 
