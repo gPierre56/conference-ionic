@@ -5,8 +5,8 @@ node_js:
     only:
     — master
 before_script:
-  - npm install -g ionic cordova
-script: — ionic cordova build browser — prod
+  - npm i ionic cordova
+script: ionic build --prod -- --base-href https://gPierre56.github.io/conference-ionic/
 deploy:
   provider: pages
   skip-cleanup: true
