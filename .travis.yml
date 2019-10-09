@@ -1,9 +1,6 @@
 language: node_js
 node_js:
   - "12"
-  branches:
-    only:
-    — master
 before_script: npm i ionic cordova
 script: ionic build --prod -- --base-href https://gPierre56.github.io/conference-ionic/
 deploy:
