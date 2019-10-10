@@ -10,11 +10,12 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
+    <ion-row>
     <ion-card class="welcome-card">
-        <ion-row justify-content-center>
-            <ion-img src="../../assets/logo-devfest-wow.png" alt="" style="width: 50%; height: 15%;"
-                     class="align"></ion-img>
+        <ion-row class="ion-justify-content-center">
+            <ion-img src="/assets/logo-devfest-wow.png" alt="logo_wow" style="width: 50%; height: 15%;"
+                     class="ion-margin-top"></ion-img>
         </ion-row>
         <ion-card-header>
             <ion-card-title class="ion-text-center">Conférence</ion-card-title>
@@ -28,11 +29,12 @@
 
             </ion-row>
             <ion-row class="ion-justify-content-center">
-                <ion-button color="primary" margin-top (click)="naviguerPresentateurs()">Voir les présentateurs</ion-button>
+                <ion-button color="primary" class="ion-margin-top" (click)="naviguerPresentateurs()">Voir les présentateurs</ion-button>
             </ion-row>
         </ion-card-content>
 
     </ion-card>
+    </ion-row>
 </ion-content>
 
 

@@ -10,8 +10,16 @@
 </ion-header>
 
 <ion-content>
-    <ion-row *ngFor='let session of listeSessions'>
-        <ion-button color="primary" size="small" (click)="naviguerDetailsSession(session.id)">{{session.title}}</ion-button>
-      <ion-icon name="share-alt"></ion-icon>
-    </ion-row>
+    <ion-grid>
+        <ion-row *ngFor='let session of listeSessions' class="">
+            <ion-col>
+                <ion-button color="primary" size="small" style="width: 90%"
+                            (click)="naviguerDetailsSession(session.id)"><p style="font-size : 5px; white-space: nowrap;
+                            overflow: hidden; text-overflow: ellipsis; max-width: 80%" slot="start">{{session.title}}</p>
+                    <ion-icon name="send" color="light" slot="end"></ion-icon>
+                </ion-button>
+
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

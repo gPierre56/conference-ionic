@@ -1,26 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Détail de la session</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start" class="ion-margin-start" (click)="backClicked()">
+            <ion-icon icon="arrow-back"></ion-icon>
+        </ion-buttons>
+        <ion-title  slot="end">
+            Détail de la session
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-card>
-  <ion-card-title class="ion-justify-content-center">{{session.title}}</ion-card-title>
-  <ion-card-content>{{session.description}}</ion-card-content>
-</ion-card>
-<ion-card>
-  <ion-card-title class="ion-justify-content-center">Présentateurs</ion-card-title>
-  <ion-card-content *ngIf="presentateursSession">
-    <ion-row *ngFor="let presentateur of presentateursSession">
-      <ion-img src="https://devfest2018.gdgnantes.com/{{presentateur.photoUrl}}"></ion-img>
-      <a routerLink="/details-presentateur/{{presentateur.id}}">{{presentateur.name}}</a>
-    </ion-row>
-  </ion-card-content>
-  <ion-card-content *ngIf="!presentateursSession">
+    <ion-card>
+        <ion-card-title class="ion-margin-start">{{session.title}}</ion-card-title>
+        <ion-card-content *ngIf="session.description">{{session.description}}</ion-card-content>
+        <ion-card-content *ngIf="!session.description"><p>Aucune description disponible.</p></ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-title class="ion-margin-start">Présentateurs</ion-card-title>
+        <ion-card-content *ngIf="presentateursSession">
+            <ion-row *ngFor="let presentateur of presentateursSession">
+                <ion-img src="https://devfest2018.gdgnantes.com/{{presentateur.photoUrl}}" style=" height:60px; width:120px;"></ion-img>
+                <a class="ion-margin-top" routerLink="/details-presentateur/{{presentateur.id}}">{{presentateur.name}}</a>
+            </ion-row>
+        </ion-card-content>
+        <ion-card-content *ngIf="!presentateursSession">
 
-     Aucun présentateur pour cette session.
+            Aucun présentateur pour cette session.
 
-  </ion-card-content>
-</ion-card>
+        </ion-card-content>
+    </ion-card>
 </ion-content>

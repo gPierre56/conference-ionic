@@ -1,11 +1,18 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Présentateurs</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Présentateurs</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-row *ngFor="let presentateur of listePresentateurs">
-  <ion-button class="primary" (click)="naviguerDetailsPresentateurs(presentateur.id)">{{presentateur.name}}</ion-button>
-</ion-row>
+
+    <ion-row *ngFor="let presentateur of listePresentateurs" >
+
+        <ion-button  style="width: 80%;" class="ion-margin-start ion-margin-top primary"
+                    (click)="naviguerDetailsPresentateurs(presentateur.id.toString())">{{presentateur.name}}
+          <ion-icon name="send" color="light" slot="end"></ion-icon></ion-button>
+    </ion-row>
 </ion-content>

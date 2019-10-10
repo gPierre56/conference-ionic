@@ -4,6 +4,7 @@ import {SessionService} from '../services/session.service';
 import {ActivatedRoute} from '@angular/router';
 import {Presentateur} from '../entities/presentateurs/presentateur';
 import {Session} from '../entities/sessions/session';
+import {Location} from '@angular/common';
 
 @Component({
     selector: 'app-details-presentateurs',
@@ -18,7 +19,11 @@ export class DetailsPresentateursPage implements OnInit {
     listeSessions: Array<Session> = [];
 
     constructor(private presentateurService: PresentateurService, private sessionService: SessionService,
-                private activatedRoute: ActivatedRoute) {
+                private activatedRoute: ActivatedRoute, private location: Location) {
+    }
+
+    backClicked() {
+        this.location.back();
     }
 
     ngOnInit() {
