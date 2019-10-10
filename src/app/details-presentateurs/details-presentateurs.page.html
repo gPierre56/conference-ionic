@@ -11,9 +11,9 @@
 
 <ion-content>
     <ion-card>
-        <ion-card-title class="ion-margin-start">{{presentateur.name}}</ion-card-title>
+        <ion-card-title class="ion-margin-start ion-margin-top">{{presentateur.name}}</ion-card-title>
         <ion-card-subtitle>
-            <ion-img src="https://devfest2018.gdgnantes.com/{{presentateur.photoUrl}}"></ion-img>
+            <ion-img class="ion-margin-top" src="https://devfest2018.gdgnantes.com/{{presentateur.photoUrl}}" style=" height:180px; width:360px;"></ion-img>
         </ion-card-subtitle>
       <ion-card-content>
         <ion-row style="font-weight: bold;">Biographie :</ion-row>
@@ -21,9 +21,13 @@
       </ion-card-content>
     </ion-card>
   <ion-card>
-    <ion-row>Ses présentations :</ion-row>
+      <ion-row><p class="ion-margin-start">Ses présentations :</p></ion-row>
     <ion-row *ngIf="sessions">
-      <a routerLink="/details-session/{{session.id}}" *ngFor="let session of sessions">{{session.title}}</a>
+        <a routerLink="/details-session/{{session.id}}" *ngFor="let session of sessions"><p class="ion-margin-start" style="font-size : 10px; white-space: nowrap;
+                            overflow: hidden; text-overflow: ellipsis; ">{{session.title}}</p></a>
     </ion-row>
+      <ion-row *ngIf="!sessions">
+          <p>Aucune présentation</p>
+      </ion-row>
   </ion-card>
 </ion-content>
