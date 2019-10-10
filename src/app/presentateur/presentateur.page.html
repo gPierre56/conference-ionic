@@ -1,9 +1,11 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>presentateur</ion-title>
+    <ion-title>Présentateurs</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+<ion-row *ngFor="let presentateur of listePresentateurs">
+  <ion-button class="primary" (click)="naviguerDetailsPresentateurs(presentateur.id)">{{presentateur.name}}</ion-button>
+</ion-row>
 </ion-content>

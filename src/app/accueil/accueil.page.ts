@@ -38,6 +38,7 @@ export class AccueilPage implements OnInit {
                 console.log('Impossible de récupérer les données de l\'API');
             });
         } else {
+
             this.listeConferences = JSON.parse(localStorage.getItem('schedules'));
         }
         this.dateDebut = this.listeConferences[0].date;

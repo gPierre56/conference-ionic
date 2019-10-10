@@ -14,28 +14,28 @@ export class SessionPage implements OnInit {
     constructor(private sessionService: SessionService, private router: Router) {
     }
 
+    /**
+     * La liste de toutes les sessions récupérée depuis le cache ou le réseau
+     */
     public listeSessions: Array<Session> = [];
 
+    /**
+     * Redirige vers la page d'affichage des détails de la session demandée
+     * @param idClick L'id de la session pour laquelle sera affichée les détails
+     */
     naviguerDetailsSession(idClick: number): void {
-        this.router.navigate(['details-session'], {
-            queryParams: {
-                id: idClick
-            }
-        });
+        this.router.navigate(['details-session', idClick]);
     }
 
     ngOnInit() {
-        if (!localStorage.getItem('sessions')) {
-            this.sessionService.recupererDonneesSessionDeAPI().subscribe((sessions) => {
-
-                this.listeSessions = Object.values(sessions);
-                localStorage.setItem('sessions', JSON.stringify(Object.values(sessions)));
-                console.log('réseau');
-            });
-        } else {
-            this.listeSessions = JSON.parse(localStorage.getItem('sessions'));
-            console.log('cache');
-        }
+        /**
+         * On initialise la liste des sessions ici via la classe service.
+         */
+        this.sessionService.recupererDonneesSessionDeAPI().subscribe((sessions) => {
+            this.listeSessions = sessions;
+        }, (error => {
+            console.log('Problème lors de la récupération des données des sessions.', error);
+        }));
     }
 
 }

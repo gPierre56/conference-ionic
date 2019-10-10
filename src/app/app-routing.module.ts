@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: 'accueil', loadChildren: './accueil/accueil.module#AccueilPageModule' },
   { path: 'presentateur', loadChildren: './presentateur/presentateur.module#PresentateurPageModule' },
   { path: 'session', loadChildren: './session/session.module#SessionPageModule' },
-  { path: 'details-session', loadChildren: './details-session/details-session.module#DetailsSessionPageModule' }
+  { path: 'details-session/:id', loadChildren: './details-session/details-session.module#DetailsSessionPageModule' },
+  { path: 'details-presentateur/:id', loadChildren: './details-presentateurs/details-presentateurs.module#DetailsPresentateursPageModule' }
 ];
 
 @NgModule({

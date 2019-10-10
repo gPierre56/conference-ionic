@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Détails présentateur</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-title>{{presentateur.name}}</ion-card-title>
+        <ion-card-subtitle>
+            <ion-img src="https://devfest2018.gdgnantes.com/{{presentateur.photoUrl}}"></ion-img>
+        </ion-card-subtitle>
+      <ion-card-content>
+        <ion-row>Biographie</ion-row>
+        <ion-row>{{presentateur.bio}}</ion-row>
+      </ion-card-content>
+    </ion-card>
+  <ion-card>
+    <ion-row>Ses présentations</ion-row>
+    <ion-row *ngIf="sessions">
+      <a routerLink="/details-session{{session.id}}" *ngFor="let session of sessions">{{session.title}}</a>
+    </ion-row>
+  </ion-card>
+</ion-content>
