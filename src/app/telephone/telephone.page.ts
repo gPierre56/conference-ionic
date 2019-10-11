@@ -19,13 +19,18 @@ infosConnexion = new Map<string, string>();
 
 
   ngOnInit() {
+    /**
+     * On récupère les infos sur l'appareil en cours
+     */
     Device.getInfo().then((infos) => {
       for (const [key, value] of Object.entries(infos)) {
         this.infosDevice.set(key, value);
       }
-      console.log(this.infosDevice);
     });
 
+    /**
+     * On récupère les information sur le réseau
+     */
     Network.getStatus().then((statut) => {
       for (const [key, value] of Object.entries(statut)) {
         this.infosConnexion.set(key, value);

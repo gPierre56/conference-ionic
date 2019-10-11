@@ -20,7 +20,8 @@ const routes: Routes = [
   { path: 'session', loadChildren: './session/session.module#SessionPageModule' },
   { path: 'details-session/:id', loadChildren: './details-session/details-session.module#DetailsSessionPageModule' },
   { path: 'details-presentateur/:id', loadChildren: './details-presentateurs/details-presentateurs.module#DetailsPresentateursPageModule' },
-  { path: 'telephone', loadChildren: './telephone/telephone.module#TelephonePageModule' }
+  { path: 'telephone', loadChildren: './telephone/telephone.module#TelephonePageModule' },
+  { path: 'notes', loadChildren: './notes/notes.module#NotesPageModule' }
 ];
 
 @NgModule({

@@ -26,6 +26,8 @@ export class DetailsSessionPage implements OnInit {
         this.location.back();
     }
 
+
+
     ngOnInit() {
         /**
          * On récupère la liste des sessions depuis la classe de service
