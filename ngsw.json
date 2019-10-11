@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1570726576517,
+  "timestamp": 1570785222794,
   "index": "https://gPierre56.github.io/conference-ionic/index.html",
   "assetGroups": [
     {
@@ -23,8 +23,8 @@
         "https://gPierre56.github.io/conference-ionic/104-es2015.42070c5f7974727122ac.js",
         "https://gPierre56.github.io/conference-ionic/104-es5.5ab5a04118a01dca0673.js",
         "https://gPierre56.github.io/conference-ionic/105-es2015.3c2eae1afe5b0682ddff.js",
-        "https://gPierre56.github.io/conference-ionic/13-es5.655b3dc215f36470d990.js",
-        "https://gPierre56.github.io/conference-ionic/14-es2015.f5ee8deed76479518260.js",
+        "https://gPierre56.github.io/conference-ionic/13-es5.cc2ffc8e533c5984352b.js",
+        "https://gPierre56.github.io/conference-ionic/14-es2015.0f818c3d435c267b8e22.js",
         "https://gPierre56.github.io/conference-ionic/14-es5.a0c5938af268d862de90.js",
         "https://gPierre56.github.io/conference-ionic/15-es2015.167aa33b050fc8a0dd1a.js",
         "https://gPierre56.github.io/conference-ionic/15-es5.f96524573b8c124abda3.js",
@@ -217,8 +217,8 @@
         "https://gPierre56.github.io/conference-ionic/main-es5.5f18bccaccde31890bb8.js",
         "https://gPierre56.github.io/conference-ionic/polyfills-es2015.f2e99db42457f381d60d.js",
         "https://gPierre56.github.io/conference-ionic/polyfills-es5.87d5dacf9a763c81220f.js",
-        "https://gPierre56.github.io/conference-ionic/runtime-es2015.4019bebba1b4cf2831be.js",
-        "https://gPierre56.github.io/conference-ionic/runtime-es5.67588180d9e3cf14c3c6.js",
+        "https://gPierre56.github.io/conference-ionic/runtime-es2015.7ab7cc17645de23f37a1.js",
+        "https://gPierre56.github.io/conference-ionic/runtime-es5.85687e88d4a2e591404d.js",
         "https://gPierre56.github.io/conference-ionic/styles.eb43f98b1cc9e2f11649.css"
       ],
       "patterns": []
@@ -260,8 +260,8 @@
     "https://gPierre56.github.io/conference-ionic/104-es2015.42070c5f7974727122ac.js": "39cf496761ca82e59af8f2a08c64c1c15b5e3258",
     "https://gPierre56.github.io/conference-ionic/104-es5.5ab5a04118a01dca0673.js": "39cf496761ca82e59af8f2a08c64c1c15b5e3258",
     "https://gPierre56.github.io/conference-ionic/105-es2015.3c2eae1afe5b0682ddff.js": "dc20b06a019987b82163f69d2b83d68c770d6271",
-    "https://gPierre56.github.io/conference-ionic/13-es5.655b3dc215f36470d990.js": "2eb168a17a92fc53475813122eef5082c962369a",
-    "https://gPierre56.github.io/conference-ionic/14-es2015.f5ee8deed76479518260.js": "7488dbff73fac0cefa33cec55370823026982823",
+    "https://gPierre56.github.io/conference-ionic/13-es5.cc2ffc8e533c5984352b.js": "e77a15ecfc8dbf7352bc68ec3155c536b715ac97",
+    "https://gPierre56.github.io/conference-ionic/14-es2015.0f818c3d435c267b8e22.js": "69f92b5cdc3fb4af04c3b8e81a6d432415ea70c8",
     "https://gPierre56.github.io/conference-ionic/14-es5.a0c5938af268d862de90.js": "f504892c45a6731578f75d75f78aa0778ba0e590",
     "https://gPierre56.github.io/conference-ionic/15-es2015.167aa33b050fc8a0dd1a.js": "3d5af19412d4599dec46c223b608daa15960fae9",
     "https://gPierre56.github.io/conference-ionic/15-es5.f96524573b8c124abda3.js": "e0581636b4ac2ef16dfec7f3d19de2707d4a2599",
@@ -460,13 +460,13 @@
     "https://gPierre56.github.io/conference-ionic/assets/shapes.svg": "5413e95adabcb2cb639970051f55e0ddb64ace53",
     "https://gPierre56.github.io/conference-ionic/common-es2015.f8e19696f0c5bddc7786.js": "8e042c441a052a9820c31cbe89629221527f3a5e",
     "https://gPierre56.github.io/conference-ionic/common-es5.3e7884008d4f745b8bc1.js": "c309c4444a784ebc72c5030fd260e9a49477ad85",
-    "https://gPierre56.github.io/conference-ionic/index.html": "eecf8b3ebd89b3b70a315bac6bd0fe96654764f7",
+    "https://gPierre56.github.io/conference-ionic/index.html": "9f5426bd91532378705ed776d0abff377873471b",
     "https://gPierre56.github.io/conference-ionic/main-es2015.fcab65ca784f62ce1033.js": "5da4b821eda16bbc0817aae066b893fd25c58f0a",
     "https://gPierre56.github.io/conference-ionic/main-es5.5f18bccaccde31890bb8.js": "d90a7d4c0cfd5ca54de83725f772577d0c5bb5c4",
     "https://gPierre56.github.io/conference-ionic/polyfills-es2015.f2e99db42457f381d60d.js": "9579e6de134253c8affceecee5241d4cf40b8931",
     "https://gPierre56.github.io/conference-ionic/polyfills-es5.87d5dacf9a763c81220f.js": "63476bc38960c6c90925e20fc8e8268d1f3ff0be",
-    "https://gPierre56.github.io/conference-ionic/runtime-es2015.4019bebba1b4cf2831be.js": "053e2ca5d7a777e4e19568a7de1f3f14af80ccb0",
-    "https://gPierre56.github.io/conference-ionic/runtime-es5.67588180d9e3cf14c3c6.js": "e9dba42979ebf0eb10f52d8aeff0b7d3f3284d23",
+    "https://gPierre56.github.io/conference-ionic/runtime-es2015.7ab7cc17645de23f37a1.js": "03f285b2500fbf10ce2ba7ff0bc801782673fc01",
+    "https://gPierre56.github.io/conference-ionic/runtime-es5.85687e88d4a2e591404d.js": "1ebb070b45d1fac750c5981564d2db05eb83b493",
     "https://gPierre56.github.io/conference-ionic/styles.eb43f98b1cc9e2f11649.css": "9b4b32e8d0c6e3c51bad8337849110232996be69"
   },
   "navigationUrls": [
