@@ -2,11 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {Session} from '../entities/sessions/session';
 import {SessionService} from '../services/session.service';
 import {ActivatedRoute} from '@angular/router';
-import {CameraResultType, Plugins} from '@capacitor/core';
+import {CameraResultType, CameraSource, Plugins} from '@capacitor/core';
 import {InfosSession} from '../entities/sessions/infosSession';
 import {Location} from '@angular/common';
 
-const {Camera} = Plugins;
+const {Camera, Device} = Plugins;
 
 @Component({
     selector: 'app-notes',
@@ -17,6 +17,7 @@ export class NotesPage implements OnInit {
 
     listeSessions: Array<Session>;
     session: Session;
+    typeAppareil: string;
 
 
     constructor(private sessionService: SessionService, private activatedRoute: ActivatedRoute, private location: Location) {
@@ -34,6 +35,7 @@ export class NotesPage implements OnInit {
         const photo = await Camera.getPhoto({
             quality: 90,
             allowEditing: false,
+            source: CameraSource.Camera,
             resultType: CameraResultType.Base64
         }).then((resultat) => {
             this.session.infosSession.listePhotos.push(resultat.base64String);
@@ -48,6 +50,18 @@ export class NotesPage implements OnInit {
 
         });
 
+
+    }
+
+    async uploadPhoto() {
+       const photo = await Camera.getPhoto({
+           quality: 90,
+           allowEditing: false,
+           resultType: CameraResultType.Base64,
+           source: CameraSource.Photos
+
+
+       });
 
     }
 
@@ -73,6 +87,10 @@ export class NotesPage implements OnInit {
 
 
     ngOnInit() {
+
+        Device.getInfo().then((infos) => {
+            this.typeAppareil = infos.platform;
+        });
 
         /**
          * On récupère la liste de toutes les sessions

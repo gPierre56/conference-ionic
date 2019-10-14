@@ -15,7 +15,7 @@
     <ion-button (click)="takePhoto()">
       <ion-icon name="md-camera"></ion-icon>
     </ion-button>
-    <ion-button class="ion-margin-start" (click)="uploadPhoto()">
+    <ion-button class="ion-margin-start" (click)="uploadPhoto()" *ngIf="typeAppareil !== 'web'">
       <ion-icon name="md-image"></ion-icon>
     </ion-button>
   </ion-row>
