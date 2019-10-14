@@ -6,7 +6,9 @@
         <ion-title  slot="end">
             Description du présentateur
         </ion-title>
+
     </ion-toolbar>
+
 </ion-header>
 
 <ion-content>
@@ -16,6 +18,10 @@
             <ion-img class="ion-margin-top" src="https://devfest2018.gdgnantes.com/{{presentateur.photoUrl}}" style=" height:180px; width:360px;"></ion-img>
         </ion-card-subtitle>
       <ion-card-content>
+
+              <p slot="start">Ajouter à mes contacts</p>
+              <ion-toggle slot="end"  color="primary" [checked]="contactPresent" (ionChange)="ajouterContact()"></ion-toggle>
+
         <ion-row style="font-weight: bold;">Biographie :</ion-row>
         <ion-row class="ion-margin-top">{{presentateur.bio}}</ion-row>
       </ion-card-content>

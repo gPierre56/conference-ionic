@@ -11,6 +11,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {Contacts} from '@ionic-native/contacts/ngx';
 
 @NgModule({
     declarations: [AppComponent],
@@ -26,6 +27,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
         HttpClient,
         StatusBar,
         SplashScreen,
+        Contacts,
         {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
     ],
     bootstrap: [AppComponent]
