@@ -1,9 +1,55 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>notes</ion-title>
+    <ion-buttons slot="start" class="ion-margin-start" (click)="goback()">
+      <ion-icon icon="arrow-back"></ion-icon>
+    </ion-buttons>
+    <ion-title>Ajouter une note</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+<ion-row class="ion-justify-content-center">
+  <h1>{{session.title}}</h1>
+</ion-row>
+  <ion-row class="ion-justify-content-center">
+    <ion-button (click)="takePhoto()">
+      <ion-icon name="md-camera"></ion-icon>
+    </ion-button>
+    <ion-button class="ion-margin-start" (click)="uploadPhoto()">
+      <ion-icon name="md-image"></ion-icon>
+    </ion-button>
+  </ion-row>
+  <ion-row class="ion-margin-start ion-justify-content-center">
+    <ion-textarea id="corps_note" placeholder="Notes sur cette session..." maxlength="300" style="border: solid; max-width: 50%; min-height: 100px" color="primary"></ion-textarea>
+  </ion-row>
+  <ion-row class="ion-margin-top ion-justify-content-center">
+    <ion-button (click)="enregistrerNote()">Enregistrer</ion-button>
+  </ion-row>
+  <ion-row>
+    <ion-card>
+      <ion-card-subtitle>Commentaires enregistrés :</ion-card-subtitle>
+      <ion-card-content>
+        <ion-row *ngFor="let note of session?.infosSession?.listeNotes">
+          <ion-col>
+            <ion-text>{{note}}</ion-text>
+          </ion-col>
+
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </ion-row>
+  <ion-row>
+    <ion-card>
+      <ion-card-subtitle>Photos enregistrées :</ion-card-subtitle>
+      <ion-card-content>
+        <ion-row *ngFor="let photo of session?.infosSession?.listePhotos">
+          <ion-col>
+            <ion-img src="data:image/png;base64, {{photo}}"></ion-img>
+          </ion-col>
+
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </ion-row>
 
 </ion-content>

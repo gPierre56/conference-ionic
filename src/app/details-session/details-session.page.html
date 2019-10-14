@@ -3,7 +3,7 @@
         <ion-buttons slot="start" class="ion-margin-start" (click)="backClicked()">
             <ion-icon icon="arrow-back"></ion-icon>
         </ion-buttons>
-        <ion-title  slot="end">
+        <ion-title slot="end">
             Détail de la session
         </ion-title>
     </ion-toolbar>
@@ -19,8 +19,10 @@
         <ion-card-title class="ion-margin-start">Présentateurs</ion-card-title>
         <ion-card-content *ngIf="presentateursSession">
             <ion-row *ngFor="let presentateur of presentateursSession">
-                <ion-img src="https://devfest2018.gdgnantes.com/{{presentateur.photoUrl}}" style=" height:60px; width:120px;"></ion-img>
-                <a class="ion-margin-top" routerLink="/details-presentateur/{{presentateur.id}}">{{presentateur.name}}</a>
+                <ion-img src="https://devfest2018.gdgnantes.com/{{presentateur.photoUrl}}"
+                         style=" height:60px; width:120px;"></ion-img>
+                <a class="ion-margin-top"
+                   routerLink="/details-presentateur/{{presentateur.id}}">{{presentateur.name}}</a>
             </ion-row>
         </ion-card-content>
         <ion-card-content *ngIf="!presentateursSession">
@@ -28,8 +30,16 @@
             Aucun présentateur pour cette session.
 
         </ion-card-content>
+
     </ion-card>
-    <ion-card>
-        <ion-button color="primary">Mes notes</ion-button>
-    </ion-card>
+    <ion-grid>
+        <ion-row class="ion-justify-content-center">
+
+
+            <ion-card style="width: 125px;">
+                <ion-button color="primary" (click)="ajouterNotes(session.id.toString())">Mes notes</ion-button>
+            </ion-card>
+
+        </ion-row>
+    </ion-grid>
 </ion-content>

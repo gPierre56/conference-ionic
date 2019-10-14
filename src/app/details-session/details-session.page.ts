@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Session} from '../entities/sessions/session';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {SessionService} from '../services/session.service';
 import {PresentateurService} from '../services/presentateur.service';
 import {Presentateur} from '../entities/presentateurs/presentateur';
@@ -19,11 +19,23 @@ export class DetailsSessionPage implements OnInit {
     presentateursSession: Array<Presentateur> = [];
 
     constructor(private activatedRoute: ActivatedRoute, private sessionService: SessionService,
-                private presentateurService: PresentateurService, private location: Location) {
+                private presentateurService: PresentateurService, private location: Location,
+                private router: Router) {
     }
 
+    /**
+     * Renvoie vers la page précédente
+     */
     backClicked() {
         this.location.back();
+    }
+
+    /**
+     * Redirige vers la page d'ajout d'une note
+     * @param idClick Id de la session pour laquelle ajouter une note
+     */
+    ajouterNotes(idClick) {
+        this.router.navigate(['/notes', idClick]);
     }
 
 
